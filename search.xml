@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search> 
+  
+    
+    <entry>
+      <title>asp.net MVC 隨手筆記 - 使用 Open Iconic 加入圖示</title>
+      <link href="/2018/11/22/asp-net-MVC-%E9%9A%A8%E6%89%8B%E7%AD%86%E8%A8%98-%E4%BD%BF%E7%94%A8-Open-Iconic-%E5%8A%A0%E5%85%A5%E5%9C%96%E7%A4%BA/"/>
+      <url>/2018/11/22/asp-net-MVC-%E9%9A%A8%E6%89%8B%E7%AD%86%E8%A8%98-%E4%BD%BF%E7%94%A8-Open-Iconic-%E5%8A%A0%E5%85%A5%E5%9C%96%E7%A4%BA/</url>
+      
+        <content type="html"><![CDATA[<h1 id="使用-Open-Iconic-添加網頁圖示"><a href="#使用-Open-Iconic-添加網頁圖示" class="headerlink" title="使用 Open Iconic 添加網頁圖示"></a>使用 Open Iconic 添加網頁圖示</h1><p>於 <a href="https://useiconic.com/open/" target="_blank" rel="noopener">OPENICONIC 官網</a> 下載圖示壓縮檔<br><img src="https://imgur.com/aSlElQC.png" alt="image alt"></p><p>下載並解壓縮後，於 ~/open-iconic-master/font/<strong>css</strong> 中提取所需的 css 檔案<br>並將其檔案放置 asp.net MVC <strong>~/Content</strong> 資料夾中 (小編這邊提取的是<strong>open-iconic-bootstrap.min.css</strong>)<br>以及 ~/open-iconic-master/font/<strong>fonts</strong> 中提取所有檔案<br>並將其檔案放置 asp.net MVC <strong>~/fonts</strong> 資料夾中<br><img src="https://imgur.com/z657352.png" alt="image alt"></p><p>於 <a href="https://useiconic.com/open/" target="_blank" rel="noopener">OPENICONIC 官網</a> 挑選要加入的圖示<br>並點擊圖示以彈跳出代碼範例<br><img src="https://imgur.com/3CVUdtd.png" alt="image alt"></p><p>因為小編提取的是 <strong>bootstrap.min.css</strong><br>所以採用 <strong>Bootstrap Icon Font</strong> 代碼<br>並於要顯示的 html 加入代碼 (這邊以 Home Page 為例)<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">@&#123;</span><br><span class="line">    ViewBag.Title = &quot;Home Page&quot;;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">&lt;div&gt;</span><br><span class="line">    &lt;span&gt; Hello World&lt;/span&gt;</span><br><span class="line">    &lt;span class=&quot;oi oi-heart&quot;&gt;&lt;/span&gt;</span><br><span class="line">&lt;/div&gt;</span><br></pre></td></tr></table></figure></p><p>即可顯示圖示<br><img src="https://imgur.com/yzSoLCy.png" alt="image alt"></p><p><strong>參考</strong><br><a href="https://useiconic.com/open/" target="_blank" rel="noopener">OPENICONIC 官網</a></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 學習日誌 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> asp.new MVC </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    <entry>
+      <title>遊戲藍圖-LifeOrDie (1)</title>
+      <link href="/2018/11/21/%E9%81%8A%E6%88%B2%E8%97%8D%E5%9C%96-LifeOrDie-1/"/>
+      <url>/2018/11/21/%E9%81%8A%E6%88%B2%E8%97%8D%E5%9C%96-LifeOrDie-1/</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+      
+      <categories>
+          
+          <category> 創作日誌 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> LifeOrDie </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    <entry>
+      <title>asp.net MVC 隨手筆記 - Styles.Render 加入 JS</title>
+      <link href="/2018/11/21/asp.net%20MVC%20%E9%9A%A8%E6%89%8B%E7%AD%86%E8%A8%98%20-%20Styles.Render%20%E5%8A%A0%E5%85%A5%20JS/"/>
+      <url>/2018/11/21/asp.net%20MVC%20%E9%9A%A8%E6%89%8B%E7%AD%86%E8%A8%98%20-%20Styles.Render%20%E5%8A%A0%E5%85%A5%20JS/</url>
+      
+        <content type="html"><![CDATA[<h1 id="使用-Styles-Render-include-JS、CSS"><a href="#使用-Styles-Render-include-JS、CSS" class="headerlink" title="使用 Styles.Render include JS、CSS"></a>使用 Styles.Render include JS、CSS</h1><h3 id="include-JS、CSS"><a href="#include-JS、CSS" class="headerlink" title="include JS、CSS"></a><strong>include JS、CSS</strong></h3><p>在 AppWeb/<strong>BundleConfig</strong> RegisterBundles function 中輸入<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bundles.Add(new ScriptBundle(&quot;~/bundles/typename&quot;).Include(&quot;~/Scripts/filename&quot;));</span><br></pre></td></tr></table></figure></p><p>並在指定的 cshtml 中，使用 @Scripts.Render 即可使用<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">@Scripts.Render(&quot;~/bundles/typename&quot;)</span><br></pre></td></tr></table></figure></p><p>以新增的 vue.js 為例<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bundles.Add(new ScriptBundle(&quot;~/bundles/vue&quot;).Include(&quot;~/Scripts/vue.js&quot;));</span><br></pre></td></tr></table></figure></p><p>並於 Views/<strong>_Layout.cshtml</strong> 中加入<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">@Scripts.Render(&quot;~/bundles/vue&quot;)</span><br></pre></td></tr></table></figure></p><p><img src="https://imgur.com/hs2deeO.png" alt="image alt"></p><p><em>額外小補充<br>可使用 {version}、** </em>等模糊查詢功能*</p><h3 id="include-指定資料夾下的所有-JS、CSS"><a href="#include-指定資料夾下的所有-JS、CSS" class="headerlink" title="include 指定資料夾下的所有 JS、CSS"></a><strong>include 指定資料夾下的所有 JS、CSS</strong></h3><p>在 AppWeb/<strong>BundleConfig</strong> RegisterBundles function 中輸入<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bundles.Add(newScriptBundle(&quot;~/bundles/typename&quot;).IncludeDirectory(&quot;~/Scripts/directoryname&quot;, &quot;*.js&quot;, true));</span><br></pre></td></tr></table></figure></p><p>舉個例子 &gt;&gt;&gt;<br>新增 JS 檔案<br><img src="https://imgur.com/itt99A8.png" alt="image alt"></p><p>輸入代碼<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bundles.Add(newScriptBundle(&quot;~/bundles/AllJS&quot;).IncludeDirectory(&quot;~/Scripts/MainJS&quot;, &quot;*.js&quot;, true));</span><br></pre></td></tr></table></figure></p><p>並在指定的 cshtml 中，使用 @Scripts.Render 即可使用<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">@Scripts.Render(&quot;~/bundles/AllJS&quot;)</span><br></pre></td></tr></table></figure></p><p><img src="https://imgur.com/Q3YKaV7.png" alt="image alt"></p><p><em>額外小補充<br>.js 檔案無法從 Views 資料夾下作引用<br>一定要放在 Scripts 資料夾下才可以</em></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 學習日誌 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> asp.new MVC </tag>
+            
+        </tags>
+      
+    </entry>
+    
+  
+  
+</search>
