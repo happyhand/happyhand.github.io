@@ -1,58 +1,122 @@
 <?xml version="1.0" encoding="utf-8"?>
-<search>
-  <entry>
-    <title><![CDATA[Python 隨手筆記 - 安裝Django]]></title>
-    <url>%2F2018%2F11%2F26%2FPython-%E9%9A%A8%E6%89%8B%E7%AD%86%E8%A8%98-%E5%AE%89%E8%A3%9DDjango%2F</url>
-    <content type="text"><![CDATA[安裝 Django在開始 Python 之旅前咱們來安裝 Django 作為 Python 的 web 框架 建立 Django 資料夾在開始一連串的安裝程序之前我們先建立一個待會要安裝 Django 的資料夾塔克用的是 D:\WebProject\AppWeb\django待會會以這個路徑為例子 建立虛擬環境我們會建立一個虛擬環境供 Django 使用還記得在上一個章節 Python 隨手筆記 - 安裝Python 中，請大家記得的 Python 安裝路徑嗎?打開命令提示字元 (cmd)，先將路徑指定到 Python 的安裝路徑接著輸入建立虛擬環境的指令 (python -m venv 後面打上要建立的虛擬環境名稱)1python -m venv yourvirtualenvironmentname 塔克這邊的例子是1python -m venv venv 成功後就會看到原本 Python 安裝資料夾中，多了一個 venv 資料夾 接著我們回到創建 django 的資料夾中，並執行 ~venv/Scripts/activate，以進入到虛擬環境中 成功後，會如下圖顯示 (前方會掛載自訂的虛擬環境名稱，如塔克所自訂的 venv) 安裝 Django接下來要開始安裝 Django這邊塔克會先示範一個錯誤的情況避免大家遇到跟我一樣的問題 Or2首先輸入代碼，安裝 Django1pip install django==1.6.6 (圖中有提示要升級 pip，塔克這邊有跟著執行升級)完成後，咱們來創建專案 !輸入代碼以下代碼1python c:\yourinstallpath\Python\Python37-32\venv\Scripts\django-admin.py startproject yourprojectname 塔克這邊的例子是1python c:\******\AppData\Local\Programs\Python\Python37-32\venv\Scripts\django-admin.py startproject webapi 噹噹 !! 發生錯誤了 !!AttributeError: module ‘html.parser’ has no attribute ‘HTMLParseError’後來 Google 了一下，發現是版本過舊所致所以建議大家安裝前記得先到 Django 官網 中看一下最新版本是多少 (會不會太晚講了 QAQ”aaa)修改一下原本安裝得代碼，改成最新版本(這邊大家可以放心，django 會先自動移除舊版本後，再安裝新版本)1pip install django==2.1.3 安裝好後，咱們重新創建專案 !重新輸入剛剛得代碼1python c:\yourinstallpath\Python\Python37-32\venv\Scripts\django-admin.py startproject yourprojectname 成功後，就會在 django 資料夾中看見專案 參考Django Girls 教學]]></content>
+<search> 
+  
+    
+    <entry>
+      <title>Python 隨手筆記 - 安裝Django</title>
+      <link href="/2018/11/26/Python-%E9%9A%A8%E6%89%8B%E7%AD%86%E8%A8%98-%E5%AE%89%E8%A3%9DDjango/"/>
+      <url>/2018/11/26/Python-%E9%9A%A8%E6%89%8B%E7%AD%86%E8%A8%98-%E5%AE%89%E8%A3%9DDjango/</url>
+      
+        <content type="html"><![CDATA[<h2 id="安裝-Django"><a href="#安裝-Django" class="headerlink" title="安裝 Django"></a><strong>安裝 Django</strong></h2><p>在開始 Python 之旅前<br>咱們來安裝 <strong>Django</strong> 作為 Python 的 web 框架</p><h4 id="建立-Django-資料夾"><a href="#建立-Django-資料夾" class="headerlink" title="建立 Django 資料夾"></a><strong>建立 Django 資料夾</strong></h4><p>在開始一連串的安裝程序之前<br>我們先建立一個待會要安裝 Django 的資料夾<br>塔克用的是 <strong>D:\WebProject\AppWeb\django</strong><br>待會會以這個路徑為例子</p><h4 id="建立虛擬環境"><a href="#建立虛擬環境" class="headerlink" title="建立虛擬環境"></a><strong>建立虛擬環境</strong></h4><p>我們會建立一個虛擬環境供 Django 使用<br>打開命令提示字元 (cmd)，先將路徑指定到剛剛建立的 django 資料夾<br>接著輸入建立虛擬環境的指令 (python -m venv 後面打上要建立的虛擬環境名稱)<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python -m venv yourvirtualenvironmentname</span><br></pre></td></tr></table></figure></p><p>塔克這邊的例子是<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python -m venv venv</span><br></pre></td></tr></table></figure></p><p><img src="https://imgur.com/PNdn3uZ.png" alt=""></p><p>成功後就會看到原本 Python 安裝資料夾中，多了一個 venv 資料夾<br><img src="https://imgur.com/fiuacsc.png" alt=""></p><p>接著我們執行 ~venv/Scripts/activate，以進入到虛擬環境中<br><img src="https://imgur.com/YouWAHn.png" alt=""></p><p>成功後，會如下圖顯示 (前方會掛載自訂的虛擬環境名稱，如塔克所自訂的 <strong>venv</strong>)<br><img src="https://imgur.com/i8ldLKG.png" alt=""></p><h4 id="安裝-Django-1"><a href="#安裝-Django-1" class="headerlink" title="安裝 Django"></a><strong>安裝 Django</strong></h4><p>接下來要開始安裝 <strong>Django</strong><br>這邊塔克會先示範一個錯誤的情況<br>避免大家遇到跟我一樣的問題 Or2<br>首先輸入代碼，安裝 <strong>Django</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install django==1.6.6</span><br></pre></td></tr></table></figure></p><p><img src="https://imgur.com/s0IZk0H.png" alt=""></p><p>(圖中有提示要升級 <strong>pip</strong>，塔克這邊有跟著執行升級)<br>完成後，咱們來創建專案 !<br>輸入代碼以下代碼<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python c:\yourinstallpath\Python\Python37-32\venv\Scripts\django-admin.py startproject yourprojectname</span><br></pre></td></tr></table></figure></p><p>塔克這邊的例子是<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python c:\******\AppData\Local\Programs\Python\Python37-32\venv\Scripts\django-admin.py startproject webapi</span><br></pre></td></tr></table></figure></p><p><img src="https://imgur.com/J9yo5dE.png" alt=""></p><p>噹噹 !! 發生錯誤了 !!<br><strong>AttributeError: module ‘html.parser’ has no attribute ‘HTMLParseError’</strong><br>後來 Google 了一下，發現是版本過舊所致<br>所以建議大家安裝前記得先到 <a href="https://www.djangoproject.com/" target="_blank" rel="noopener">Django 官網</a> 中看一下最新版本是多少 (會不會太晚講了 QAQ”aaa)<br>修改一下原本安裝得代碼，改成最新版本<br>(這邊大家可以放心，django 會先自動移除舊版本後，再安裝新版本)<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install django==2.1.3</span><br></pre></td></tr></table></figure></p><p>安裝好後，咱們重新創建專案 !<br>重新輸入剛剛得代碼<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python c:\yourinstallpath\Python\Python37-32\venv\Scripts\django-admin.py startproject yourprojectname</span><br></pre></td></tr></table></figure></p><p><img src="https://imgur.com/XcUrEY6.png" alt=""></p><p>成功後，就會在 django 資料夾中看見專案<br><img src="https://imgur.com/q8zvU7e.png" alt=""></p><p><strong>參考</strong><br><a href="https://carolhsu.gitbooks.io/django-girls-tutorial-traditional-chiness/content/index.html" target="_blank" rel="noopener">Django Girls 教學</a></p>]]></content>
+      
+      
       <categories>
-        <category>學習日誌</category>
+          
+          <category> 學習日誌 </category>
+          
       </categories>
-      <tags>
-        <tag>Python</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[Python 隨手筆記 - 安裝Python]]></title>
-    <url>%2F2018%2F11%2F26%2FPython-%E9%9A%A8%E6%89%8B%E7%AD%86%E8%A8%98-%E5%AE%89%E8%A3%9DPython%2F</url>
-    <content type="text"><![CDATA[安裝 Python於 Python官網下載頁 下載 Python 套件 安裝套件，這邊要注意兩點1.請記得 Python 安裝路徑，稍後會用到。2.請將 “Add Python 3.7 to Path” 選項勾起，讓系統設定好環境變數 (因為安裝軟體預設是沒勾起，塔克當初忽略它，結果一直安裝不好，搞好久 Or2) 安裝好後，請打開命令提示字元 (cmd)，輸入以下指令，測試有沒有成功安裝版本1python --version 跟世界說聲 Hello利用筆記本新創一個檔案 hello.py (記得另存新檔成 .py 檔案唷) 永遠都要先跟世界說 Hello 唷 😃1print(&quot;Hello World !&quot;); 打開命令提示字元 (cmd)，輸入以下指令，呼叫剛剛的檔案，跟世界說聲 Hello !1python hello.py]]></content>
+      
+      
+        <tags>
+            
+            <tag> Python </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    <entry>
+      <title>Python 隨手筆記 - 安裝Python</title>
+      <link href="/2018/11/26/Python-%E9%9A%A8%E6%89%8B%E7%AD%86%E8%A8%98-%E5%AE%89%E8%A3%9DPython/"/>
+      <url>/2018/11/26/Python-%E9%9A%A8%E6%89%8B%E7%AD%86%E8%A8%98-%E5%AE%89%E8%A3%9DPython/</url>
+      
+        <content type="html"><![CDATA[<h2 id="安裝-Python"><a href="#安裝-Python" class="headerlink" title="安裝 Python"></a><strong>安裝 Python</strong></h2><p>於 <a href="https://www.python.org/downloads/" target="_blank" rel="noopener">Python官網下載頁</a> 下載 Python 套件<br><img src="https://imgur.com/hQqjVob.png" alt=""></p><p>安裝套件，這邊要注意一下<br>請將 <strong>“Add Python 3.7 to Path”</strong> 選項勾起，讓系統設定好環境變數<br>  (因為安裝軟體預設是沒勾起，塔克當初忽略它，結果一直安裝不好，搞好久 Or2)<br><img src="https://imgur.com/UAFFtpR.png" alt=""></p><p>安裝好後，請打開命令提示字元 (cmd)，輸入以下指令，測試有沒有成功安裝版本<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python --version</span><br></pre></td></tr></table></figure></p><p><img src="https://imgur.com/BXKTrIk.png" alt=""></p><h2 id="跟世界說聲-Hello"><a href="#跟世界說聲-Hello" class="headerlink" title="跟世界說聲 Hello"></a><strong>跟世界說聲 Hello</strong></h2><p>利用筆記本新創一個檔案 <strong>hello.py</strong> (記得另存新檔成 .py 檔案唷)<br><img src="https://imgur.com/dEiPJ2p.png" alt=""></p><p>永遠都要先跟世界說 Hello 唷 😃<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">print(&quot;Hello World !&quot;);</span><br></pre></td></tr></table></figure></p><p>打開命令提示字元 (cmd)，輸入以下指令，呼叫剛剛的檔案，跟世界說聲 Hello !<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python hello.py</span><br></pre></td></tr></table></figure></p><p><img src="https://imgur.com/yNztjar.png" alt=""></p>]]></content>
+      
+      
       <categories>
-        <category>學習日誌</category>
+          
+          <category> 學習日誌 </category>
+          
       </categories>
-      <tags>
-        <tag>Python</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[asp.net MVC 隨手筆記 - 使用 Open Iconic 加入圖示]]></title>
-    <url>%2F2018%2F11%2F22%2Fasp-net-MVC-%E9%9A%A8%E6%89%8B%E7%AD%86%E8%A8%98-%E4%BD%BF%E7%94%A8-Open-Iconic-%E5%8A%A0%E5%85%A5%E5%9C%96%E7%A4%BA%2F</url>
-    <content type="text"><![CDATA[使用 Open Iconic 添加網頁圖示於 OPENICONIC 官網 下載圖示壓縮檔 下載並解壓縮後，於 ~/open-iconic-master/font/css 中提取所需的 css 檔案並將其檔案放置 asp.net MVC ~/Content 資料夾中 (塔克這邊提取的是open-iconic-bootstrap.min.css)以及 ~/open-iconic-master/font/fonts 中提取所有檔案並將其檔案放置 asp.net MVC ~/fonts 資料夾中 於 OPENICONIC 官網 挑選要加入的圖示並點擊圖示以彈跳出代碼範例 因為塔克提取的是 bootstrap.min.css所以採用 Bootstrap Icon Font 代碼並於要顯示的 html 加入代碼 (這邊以 Home Page 為例)12345678@&#123; ViewBag.Title = &quot;Home Page&quot;;&#125;&lt;div&gt; &lt;span&gt; Hello World&lt;/span&gt; &lt;span class=&quot;oi oi-heart&quot;&gt;&lt;/span&gt;&lt;/div&gt; 即可顯示圖示 參考OPENICONIC 官網]]></content>
+      
+      
+        <tags>
+            
+            <tag> Python </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    <entry>
+      <title>asp.net MVC 隨手筆記 - 使用 Open Iconic 加入圖示</title>
+      <link href="/2018/11/22/asp-net-MVC-%E9%9A%A8%E6%89%8B%E7%AD%86%E8%A8%98-%E4%BD%BF%E7%94%A8-Open-Iconic-%E5%8A%A0%E5%85%A5%E5%9C%96%E7%A4%BA/"/>
+      <url>/2018/11/22/asp-net-MVC-%E9%9A%A8%E6%89%8B%E7%AD%86%E8%A8%98-%E4%BD%BF%E7%94%A8-Open-Iconic-%E5%8A%A0%E5%85%A5%E5%9C%96%E7%A4%BA/</url>
+      
+        <content type="html"><![CDATA[<h1 id="使用-Open-Iconic-添加網頁圖示"><a href="#使用-Open-Iconic-添加網頁圖示" class="headerlink" title="使用 Open Iconic 添加網頁圖示"></a>使用 Open Iconic 添加網頁圖示</h1><p>於 <a href="https://useiconic.com/open/" target="_blank" rel="noopener">OPENICONIC 官網</a> 下載圖示壓縮檔<br><img src="https://imgur.com/aSlElQC.png" alt=""></p><p>下載並解壓縮後，於 ~/open-iconic-master/font/<strong>css</strong> 中提取所需的 css 檔案<br>並將其檔案放置 asp.net MVC <strong>~/Content</strong> 資料夾中 (塔克這邊提取的是<strong>open-iconic-bootstrap.min.css</strong>)<br>以及 ~/open-iconic-master/font/<strong>fonts</strong> 中提取所有檔案<br>並將其檔案放置 asp.net MVC <strong>~/fonts</strong> 資料夾中<br><img src="https://imgur.com/z657352.png" alt=""></p><p>於 <a href="https://useiconic.com/open/" target="_blank" rel="noopener">OPENICONIC 官網</a> 挑選要加入的圖示<br>並點擊圖示以彈跳出代碼範例<br><img src="https://imgur.com/3CVUdtd.png" alt=""></p><p>因為塔克提取的是 <strong>bootstrap.min.css</strong><br>所以採用 <strong>Bootstrap Icon Font</strong> 代碼<br>並於要顯示的 html 加入代碼 (這邊以 Home Page 為例)<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">@&#123;</span><br><span class="line">    ViewBag.Title = &quot;Home Page&quot;;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">&lt;div&gt;</span><br><span class="line">    &lt;span&gt; Hello World&lt;/span&gt;</span><br><span class="line">    &lt;span class=&quot;oi oi-heart&quot;&gt;&lt;/span&gt;</span><br><span class="line">&lt;/div&gt;</span><br></pre></td></tr></table></figure></p><p>即可顯示圖示<br><img src="https://imgur.com/yzSoLCy.png" alt=""></p><p><strong>參考</strong><br><a href="https://useiconic.com/open/" target="_blank" rel="noopener">OPENICONIC 官網</a></p>]]></content>
+      
+      
       <categories>
-        <category>學習日誌</category>
+          
+          <category> 學習日誌 </category>
+          
       </categories>
-      <tags>
-        <tag>asp.new MVC</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[遊戲藍圖-LifeOrDie (1)]]></title>
-    <url>%2F2018%2F11%2F21%2F%E9%81%8A%E6%88%B2%E8%97%8D%E5%9C%96-LifeOrDie-1%2F</url>
-    <content type="text"></content>
+      
+      
+        <tags>
+            
+            <tag> asp.new MVC </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    <entry>
+      <title>遊戲藍圖-LifeOrDie (1)</title>
+      <link href="/2018/11/21/%E9%81%8A%E6%88%B2%E8%97%8D%E5%9C%96-LifeOrDie-1/"/>
+      <url>/2018/11/21/%E9%81%8A%E6%88%B2%E8%97%8D%E5%9C%96-LifeOrDie-1/</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+      
       <categories>
-        <category>創作日誌</category>
+          
+          <category> 創作日誌 </category>
+          
       </categories>
-      <tags>
-        <tag>LifeOrDie</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[asp.net MVC 隨手筆記 - Styles.Render 加入 JS]]></title>
-    <url>%2F2018%2F11%2F21%2Fasp.net%20MVC%20%E9%9A%A8%E6%89%8B%E7%AD%86%E8%A8%98%20-%20Styles.Render%20%E5%8A%A0%E5%85%A5%20JS%2F</url>
-    <content type="text"><![CDATA[使用 Styles.Render include JS、CSSinclude JS、CSS在 AppWeb/BundleConfig RegisterBundles function 中輸入1bundles.Add(new ScriptBundle(&quot;~/bundles/typename&quot;).Include(&quot;~/Scripts/filename&quot;)); 並在指定的 cshtml 中，使用 @Scripts.Render 即可使用1@Scripts.Render(&quot;~/bundles/typename&quot;) 以新增的 vue.js 為例1bundles.Add(new ScriptBundle(&quot;~/bundles/vue&quot;).Include(&quot;~/Scripts/vue.js&quot;)); 並於 Views/_Layout.cshtml 中加入1@Scripts.Render(&quot;~/bundles/vue&quot;) 額外小補充可使用 {version}、** 等模糊查詢功能* include 指定資料夾下的所有 JS、CSS在 AppWeb/BundleConfig RegisterBundles function 中輸入1bundles.Add(newScriptBundle(&quot;~/bundles/typename&quot;).IncludeDirectory(&quot;~/Scripts/directoryname&quot;, &quot;*.js&quot;, true)); 舉個例子 &gt;&gt;&gt;新增 JS 檔案 輸入代碼1bundles.Add(newScriptBundle(&quot;~/bundles/AllJS&quot;).IncludeDirectory(&quot;~/Scripts/MainJS&quot;, &quot;*.js&quot;, true)); 並在指定的 cshtml 中，使用 @Scripts.Render 即可使用1@Scripts.Render(&quot;~/bundles/AllJS&quot;) 額外小補充.js 檔案無法從 Views 資料夾下作引用一定要放在 Scripts 資料夾下才可以]]></content>
+      
+      
+        <tags>
+            
+            <tag> LifeOrDie </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    <entry>
+      <title>asp.net MVC 隨手筆記 - Styles.Render 加入 JS</title>
+      <link href="/2018/11/21/asp.net%20MVC%20%E9%9A%A8%E6%89%8B%E7%AD%86%E8%A8%98%20-%20Styles.Render%20%E5%8A%A0%E5%85%A5%20JS/"/>
+      <url>/2018/11/21/asp.net%20MVC%20%E9%9A%A8%E6%89%8B%E7%AD%86%E8%A8%98%20-%20Styles.Render%20%E5%8A%A0%E5%85%A5%20JS/</url>
+      
+        <content type="html"><![CDATA[<h1 id="使用-Styles-Render-include-JS、CSS"><a href="#使用-Styles-Render-include-JS、CSS" class="headerlink" title="使用 Styles.Render include JS、CSS"></a>使用 Styles.Render include JS、CSS</h1><h3 id="include-JS、CSS"><a href="#include-JS、CSS" class="headerlink" title="include JS、CSS"></a><strong>include JS、CSS</strong></h3><p>在 AppWeb/<strong>BundleConfig</strong> RegisterBundles function 中輸入<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bundles.Add(new ScriptBundle(&quot;~/bundles/typename&quot;).Include(&quot;~/Scripts/filename&quot;));</span><br></pre></td></tr></table></figure></p><p>並在指定的 cshtml 中，使用 @Scripts.Render 即可使用<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">@Scripts.Render(&quot;~/bundles/typename&quot;)</span><br></pre></td></tr></table></figure></p><p>以新增的 vue.js 為例<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bundles.Add(new ScriptBundle(&quot;~/bundles/vue&quot;).Include(&quot;~/Scripts/vue.js&quot;));</span><br></pre></td></tr></table></figure></p><p>並於 Views/<strong>_Layout.cshtml</strong> 中加入<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">@Scripts.Render(&quot;~/bundles/vue&quot;)</span><br></pre></td></tr></table></figure></p><p><img src="https://imgur.com/hs2deeO.png" alt=""></p><p><em>額外小補充<br>可使用 {version}、** </em>等模糊查詢功能*</p><h3 id="include-指定資料夾下的所有-JS、CSS"><a href="#include-指定資料夾下的所有-JS、CSS" class="headerlink" title="include 指定資料夾下的所有 JS、CSS"></a><strong>include 指定資料夾下的所有 JS、CSS</strong></h3><p>在 AppWeb/<strong>BundleConfig</strong> RegisterBundles function 中輸入<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bundles.Add(newScriptBundle(&quot;~/bundles/typename&quot;).IncludeDirectory(&quot;~/Scripts/directoryname&quot;, &quot;*.js&quot;, true));</span><br></pre></td></tr></table></figure></p><p>舉個例子 &gt;&gt;&gt;<br>新增 JS 檔案<br><img src="https://imgur.com/itt99A8.png" alt=""></p><p>輸入代碼<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bundles.Add(newScriptBundle(&quot;~/bundles/AllJS&quot;).IncludeDirectory(&quot;~/Scripts/MainJS&quot;, &quot;*.js&quot;, true));</span><br></pre></td></tr></table></figure></p><p>並在指定的 cshtml 中，使用 @Scripts.Render 即可使用<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">@Scripts.Render(&quot;~/bundles/AllJS&quot;)</span><br></pre></td></tr></table></figure></p><p><img src="https://imgur.com/Q3YKaV7.png" alt=""></p><p><em>額外小補充<br>.js 檔案無法從 Views 資料夾下作引用<br>一定要放在 Scripts 資料夾下才可以</em></p>]]></content>
+      
+      
       <categories>
-        <category>學習日誌</category>
+          
+          <category> 學習日誌 </category>
+          
       </categories>
-      <tags>
-        <tag>asp.new MVC</tag>
-      </tags>
-  </entry>
+      
+      
+        <tags>
+            
+            <tag> asp.new MVC </tag>
+            
+        </tags>
+      
+    </entry>
+    
+  
+  
 </search>
