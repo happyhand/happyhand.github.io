@@ -3,7 +3,7 @@
   <entry>
     <title><![CDATA[asp.net core 隨手筆記 - 使用 IIS 架設 .net core API 站台]]></title>
     <url>%2F2019%2F02%2F12%2Fasp-net-core-%E9%9A%A8%E6%89%8B%E7%AD%86%E8%A8%98-%E4%BD%BF%E7%94%A8-IIS-%E6%9E%B6%E8%A8%AD-net-core-API-%E7%AB%99%E5%8F%B0%2F</url>
-    <content type="text"><![CDATA[安裝 .NET Core 裝載套件組合於官網下載 .net Core 裝載套件組合 安裝套件 於 IIS 設定 API 站台這邊要注意幾個要點 需使用 發行 發佈檔案 實體路徑須設定至 publish 位置 於 hosts config 中加入本地 domain 127.0.0.1 www.appnetcore.test(host config 可於 C:\Windows\System32\drivers\etc 中找到) 以上都設定完後，即可測試 api 是否成功 (*ゝ∀･)v]]></content>
+    <content type="text"><![CDATA[安裝 .NET Core 裝載套件組合於官網下載 .net Core 裝載套件組合 安裝套件 架設 .net core API 站台於 IIS 設定 API 站台這邊要注意幾個要點 需使用 發行 發佈檔案 實體路徑須設定至 publish 位置 於 hosts config 中加入本地 domain 127.0.0.1 www.appnetcore.test(host config 可於 C:\Windows\System32\drivers\etc 中找到) 以上都設定完後，即可測試 api 是否成功 (*ゝ∀･)v]]></content>
       <categories>
         <category>學習日誌</category>
       </categories>
